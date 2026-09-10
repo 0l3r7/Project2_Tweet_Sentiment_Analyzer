@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Tweet Sentiment Analyzer</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+    <script
+        src="{{ url_for('static', filename='js/script.js') }}"
+        defer
+    ></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- HEADER -->
+        <header class="header">
+            <h1>Tweet Sentiment Analyzer</h1>
+        </header>
+
+
+        <!-- TWEET COMPOSER -->
+        <form id="tweetForm">
+
+            <div class="compose-box">
+
+                <!-- YOUR PROFILE PICTURE -->
+                <img
+                    src="{{ url_for('static', filename='images/birdy.png') }}"
+                    alt="Profile Picture"
+                    class="avatar"
+                >
+
+                <div class="compose-content">
+
+                    <textarea
+                        id="tweetText"
+                        name="tweet"
+                        maxlength="280"
+                        placeholder="What's happening?"
+                        required
+                    ></textarea>
+
+                    <div class="form-footer">
+
+                        <span id="characterCounter">
+                            0 / 280
+                        </span>
+
+                        <button type="submit">
+                            Post
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </form>
+
+
+        <!-- RESULT -->
+        <div
+            id="resultBox"
+            class="result-box"
+            aria-live="polite"
+        ></div>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+part 1
+
+python --version
+
+python -m venv venv
+
+python -m pip install Flask
+
+python -m pip install pandas joblib==1.5.3 scikit-learn==1.6.1
+
+python -m pip install pandas joblib==1.5.3 scikit-learn==1.6.1
+
+part 2
+
+python -m pip install google-genai python-dotenv
+
+https://aistudio.google.com/api-keys
+
+get api
+
+create .env
+GEMINI_API_KEY=AQ.Ab8RN6IAvwQp0ozcK6HYolwFmmJF9jgKkKUECa_V2DS_YoiB-Q
+
+create .gitignore
+venv/
+.env
+__pycache__/
+*.pyc

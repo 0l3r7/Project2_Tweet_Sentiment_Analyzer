@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    background: #fcdbdb;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #0f1419;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    max-width: 600px;
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding: 16px 0;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    margin: 0 16px 16px;
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #eff3f4;
+    border-radius: 18px;
+
+    box-shadow:
+        0 2px 8px rgba(15, 20, 25, 0.08);
+}
+
+.header h1 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   COMPOSE BOX
+========================= */
+
+.compose-box {
+    display: flex;
+
+    gap: 12px;
+
+    margin: 0 16px 16px;
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #eff3f4;
+    border-radius: 16px;
+
+    box-shadow:
+        0 2px 8px rgba(15, 20, 25, 0.06);
+}
+
+
+/* =========================
+   YOUR PROFILE PICTURE
+========================= */
+
+.avatar {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: block;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 1px solid #eff3f4;
+}
+
+
+/* =========================
+   COMPOSE CONTENT
+========================= */
+
+.compose-content {
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+textarea {
+    width: 100%;
+    min-height: 120px;
+
+    padding: 0;
+
+    border: none;
+    outline: none;
+    resize: none;
+
+    background: transparent;
+
+    color: #0f1419;
+
+    font-family: inherit;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+textarea::placeholder {
+    color: #536471;
+}
+
+
+/* =========================
+   FORM FOOTER
+========================= */
+
+.form-footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 12px;
+
+    border-top: 1px solid #eff3f4;
+}
+
+
+/* =========================
+   CHARACTER COUNTER
+========================= */
+
+#characterCounter {
+    color: #536471;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   POST BUTTON
+========================= */
+
+button {
+    border: none;
+    border-radius: 999px;
+
+    padding: 10px 24px;
+
+    background: #1d9bf0;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.1s ease;
+}
+
+button:hover {
+    background: #1a8cd8;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   RESULT BOX
+========================= */
+
+.result-box {
+    display: none;
+
+    margin: 0 16px 16px;
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #eff3f4;
+    border-radius: 16px;
+
+    box-shadow:
+        0 2px 8px rgba(15, 20, 25, 0.06);
+}
+
+
+/* =========================
+   RESULT PROFILE
+========================= */
+
+.tweet-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 14px;
+}
+
+
+/* =========================
+   RESULT PROFILE PICTURE
+========================= */
+
+.tweet-avatar {
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    display: block;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 1px solid #eff3f4;
+}
+
+
+/* =========================
+   PROFILE NAME + HANDLE
+========================= */
+
+.tweet-user {
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+}
+
+.tweet-name {
+    color: #0f1419;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.tweet-handle {
+    color: #536471;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   TWEET / WORD
+========================= */
+
+.tweet-text {
+    margin-bottom: 16px;
+
+    color: #0f1419;
+
+    font-size: 17px;
+    line-height: 1.5;
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+
+/* =========================
+   SENTIMENT
+========================= */
+
+.sentiment-label {
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+    padding: 6px 14px;
+
+    border-radius: 999px;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* POSITIVE */
+
+.sentiment-label.positive {
+    background: #e6f8f0;
+    color: #008f63;
+}
+
+
+/* NEGATIVE */
+
+.sentiment-label.negative {
+    background: #ffe8e8;
+    color: #d71920;
+}
+
+
+/* NEUTRAL */
+
+.sentiment-label.neutral {
+    background: #fff4cc;
+    color: #806600;
+}
+
+
+/* =========================
+   GEMINI EXPLANATION
+========================= */
+
+.ai-explanation {
+    padding: 14px;
+
+    background: #f7f9f9;
+
+    border-radius: 12px;
+
+    color: #536471;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.ai-explanation strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #0f1419;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.result-box.error {
+    border-left: 5px solid #f4212e;
+
+    background: #fff5f5;
+}
+
+.result-box.error .tweet-text {
+    color: #b42318;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    .header {
+        margin: 0 12px 12px;
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .header h1 {
+        font-size: 19px;
+    }
+
+    .compose-box {
+        margin: 0 12px 12px;
+        padding: 16px;
+        border-radius: 14px;
+    }
+
+    .result-box {
+        margin: 0 12px 12px;
+        padding: 16px;
+        border-radius: 14px;
+    }
+
+    .avatar {
+        width: 44px;
+        height: 44px;
+    }
+
+    textarea {
+        min-height: 110px;
+        font-size: 18px;
+    }
+
+    button {
+        padding: 10px 18px;
+    }
+
+    .tweet-avatar {
+        width: 42px;
+        height: 42px;
+    }
+
+    .tweet-text {
+        font-size: 16px;
+    }
+}
